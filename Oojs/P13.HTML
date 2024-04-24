@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>object property destructure using loop</h1>
+    </center>
+    <hr>
+
+    <script>
+        const user ={
+            name : "raj",
+            email : "rag@gmail.com",
+            mobile : "3756987988",
+            age : 12
+        };
+
+        console.log(user.age);
+        console.log(user['age']);
+
+
+        //for....in
+
+        for(let item in user){
+            document.write(`<h1>${item} : ${user[item]}</h1>`)
+        }
+    </script>
+</body>
+</html>

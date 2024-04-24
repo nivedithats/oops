@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>By using an obbject constructor (constructor Parameter) </h1>
+    </center> 
+    <!-- this keyword is used to pointing  to the current veriable or properties or values -->
+    <hr>
+    <h1>Example</h1>
+
+
+    <script>
+        let employeeDetails = new Object({
+            fristName : "thejas",
+            lastname : 'Rav',
+            fullName :function(){
+                return this.fristName + "" + this.lastname
+            }
+        });
+        document.write(employeeDetails.fristName + "<br>")
+        document.write(employeeDetails.lastname + "<br>")
+        document.write(employeeDetails.fullName() + "<br>")
+         
+
+
+
+
+        
+    </script>
+
+
+    <h1>Example2</h1>
+
+    <script>
+        function studentDetails(fristName,lastname){
+            let fn, ln,fullName;
+
+            this.fn = fristName;
+            this.ln = lastname;
+
+
+            this.fullName = this.fn + "" + this.ln;
+
+
+            console.log('fn' + fn);
+            console.log('ln' + ln);
+            console.log('fullName' + fullName);
+
+
+        }
+
+
+        let student = new studentDetails('html','css');//object
+        document.write(typeof student)
+        document.write(`<h1>${student.fn}</h1>`)
+        document.write(`<h1>${student.ln}</h1>`)
+        document.write(`<h1>${student.fullName}</h1>`)
+
+    </script>
+</body>
+</html>

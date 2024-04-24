@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Object methods = definePrototype (object, key,{value:xx})</h1>
+    </center>
+    <hr>
+
+    <script>
+        let user = {
+            name:"john"
+        }
+        console.log(user);
+
+
+        //defineProperty is used to create properties of object exernally.
+        Object.defineProperty(user,'email',{
+            value:'john@gmail.com'
+        })
+        console.log(user);
+
+        Object.defineProperty(user,'age',{
+            value:23
+        })
+        console.log(user);
+        console.log(user.email);
+        console.log(user.age);
+    </script>
+</body>
+</html>

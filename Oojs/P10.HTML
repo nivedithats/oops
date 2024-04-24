@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <CENter>
+        <h1>Object.entries</h1>
+    </CENter>
+    <hr>
+
+    <script>
+        //it retirns an array of object properties
+
+        const user  = {
+            name : "raj",
+            email: "taj@gmail.com",
+            mobile:"64532876498",
+            age:23
+        };
+        //[['name' , 'raj'],[key,value]]
+        let entries = Object.entries(user);
+        console.log('typeOf(entries)',typeof entries);
+        console.log('(entries)',entries);//array[key,value]
+
+
+        for(const [key,value] of Object.entries(user)){
+            //console.log(key);
+            //console.log(value);
+
+
+            console.log(key, '=', value);
+        }
+    </script>
+</body>
+</html>
